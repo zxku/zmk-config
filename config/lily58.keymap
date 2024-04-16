@@ -13,9 +13,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press     &kp RALT>,
-                <&macro_tap      &kp N8 &kp N8 &kp N0 &kp N0>,
-                <&macro_release    &kp RALT>;
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_8 &kp KP_N8 &kp KP_N0 &kp KP_N0>,
+                <&macro_release>,
+                <&kp RALT>;
 
             label = "NOTEQUAL";
             wait-ms = <30>;
@@ -25,8 +28,177 @@
         pi: pi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp RALT>;
+
             label = "PI";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        plusminus: plusminus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "PLUSMINUS";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        greaterthan: greaterthan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "GREATERTHAN";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        lessthan: lessthan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "LESSTHAN";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        approxequal: approxequal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "APPROXEQUAL";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        alpha: alpha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_2 &kp KP_NUMBER_4>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "ALPHA";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        Micro: Micro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_0>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "MICRO";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        degree: degree {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DEGREE";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        square: square {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "SQUARE";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        Diam: Diam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DIAM";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        littledelta: littledelta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "LITTLEDELTA";
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
     };
 
@@ -61,11 +233,11 @@
 
         SldWksNumb {
             bindings = <
-&kp N7  &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &kp LA(N8)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp BSPC
-&kp N4  &kp N5  &kp N6   &kp STAR   &kp A     &kp ESC                            &trans     &trans      &trans        &kp UP        &trans        &kp BSLH
-&kp N1  &kp N2  &kp N3   &kp MINUS  &kp D     &kp S                              &trans     &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &kp RET
-&to 0   &kp N0  &kp DOT  &kp PLUS   &wire     &kp TAB    &kp LCTRL    &trans     &trans     &trans      &trans        &trans        &trans        &kp RSHFT
-                         &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &mo 4      &kp RALT    &kp RCTRL
+&kp N7  &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &NotEqual     &greaterthan  &lessthan  &plusminus    &kp BSPC
+&kp N4  &kp N5  &kp N6   &kp STAR   &kp A     &kp ESC                            &Diam      &square       &kp HOME      &kp UP     &littledelta  &kp BSLH
+&kp N1  &kp N2  &kp N3   &kp MINUS  &kp D     &kp S                              &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &kp RET
+&to 0   &kp N0  &kp DOT  &kp PLUS   &wire     &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &kp RSHFT
+                         &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &tog 1     &kp RALT      &kp RCTRL
             >;
         };
 
