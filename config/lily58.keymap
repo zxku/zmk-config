@@ -13,12 +13,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp N8 &kp N8 &kp N0 &kp N0>,
-                <&macro_release>,
-                <&kp RALT>;
+                <&macro_press     &kp RALT>,
+                <&macro_tap      &kp N8 &kp N8 &kp N0 &kp N0>,
+                <&macro_release    &kp RALT>;
 
             label = "NOTEQUAL";
             wait-ms = <30>;
