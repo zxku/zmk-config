@@ -226,6 +226,13 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
+
+        templayer: templayer {
+            compatible = "zmk,behavior-caps-word";
+            label = "TEMPLAYER";
+            #binding-cells = <0>;
+            continue-list = <SPACE>;
+        };
     };
 
     combos {
@@ -309,11 +316,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC  &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
-&kp TAB  &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
-&caps    &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
-&to 1    &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp DOT               &kp FSLH               &kp RSHFT
-                           &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp RET         &mo 1      &kp RALT       &kp RCTRL
+&kp ESC  &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp TAB  &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y       &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
+&caps    &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H       &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
+&to 1    &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N       &kp M          &kp COMMA  &kp DOT               &kp FSLH               &kp RSHFT
+                           &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp RET         &caps_word  &kp RALT       &kp RCTRL
             >;
         };
 
