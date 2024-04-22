@@ -351,7 +351,7 @@
 &kp N4  &kp N5  &kp N6   &kp STAR   &kp A     &kp ESC                            &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
 &kp N1  &kp N2  &kp N3   &kp MINUS  &kp D     &kp S                              &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &kp RET
 &to 0   &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &kp RSHFT
-                         &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &tog 0     &kp RALT      &kp RCTRL
+                         &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &mo 0      &kp RALT      &kp RCTRL
             >;
         };
 
