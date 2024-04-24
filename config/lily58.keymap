@@ -381,11 +381,6 @@
             bindings = <&kp COLON>;
             key-positions = <22 23>;
         };
-
-        UtilityToggle {
-            bindings = <&tog 2>;
-            key-positions = <36 3>;
-        };
     };
 
     keymap {
