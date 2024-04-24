@@ -243,11 +243,12 @@
             bindings = <&kp LSHFT>, <&caps_word>;
         };
 
-        templayer: templayer {
+        tempNav: tempNav {
             compatible = "zmk,behavior-caps-word";
-            label = "TEMPLAYER";
+            label = "TEMPNAV";
             #binding-cells = <0>;
-            continue-list = <SPACE>;
+            layers = <1>
+            continue-list = <DOT COMMA BACKSPACE DELETE UNDERSCORE>;
         };
     };
 
