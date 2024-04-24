@@ -322,7 +322,7 @@
 
         UtilityToggle {
             bindings = <&tog 2>;
-            key-positions = <36 55>;
+            key-positions = <36 3>;
         };
     };
 
