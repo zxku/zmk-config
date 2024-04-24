@@ -252,6 +252,13 @@
             ignore-numbers;
             ignore-modifiers;
         };
+
+        TempU: TempU {
+            compatible = "zmk,behavior-caps-word";
+            label = "TEMPU";
+            #binding-cells = <0>;
+            continue-list = <NUMBER_0>;
+        };
     };
 
     combos {
