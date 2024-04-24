@@ -253,14 +253,6 @@
             ignore-modifiers;
         };
 
-        TempU: TempU {
-            compatible = "zmk,behavior-caps-word";
-            label = "TEMPU";
-            #binding-cells = <0>;
-            layers = <3>;
-            continue-list = <RMETA>;
-        };
-
         UtilityL: UtilityL {
             compatible = "zmk,behavior-hold-tap";
             label = "UTILITYL";
@@ -270,7 +262,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
             quick-tap-ms = <90>;
-            require-prior-idle-ms = <1000>;
+            require-prior-idle-ms = <500>;
         };
     };
 
