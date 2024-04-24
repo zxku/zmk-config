@@ -263,6 +263,34 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <90>;
             require-prior-idle-ms = <500>;
+            hold-trigger-key-positions = <0 1 2 5 6 7 8 9 10>;
+        };
+
+        A_key: A_key {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_KEY";
+            bindings = <&kp A>, <&kp C>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        S_key: S_key {
+            compatible = "zmk,behavior-mod-morph";
+            label = "S_KEY";
+            bindings = <&kp S>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        D_key: D_key {
+            compatible = "zmk,behavior-mod-morph";
+            label = "D_KEY";
+            bindings = <&kp D>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -363,8 +391,8 @@
         SldWksNumb {
             bindings = <
 &kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp STAR   &kp A     &kp ESC                            &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
-&kp N1         &kp N2  &kp N3   &kp MINUS  &kp D     &kp S                              &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &kp RET
+&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &kp ESC                            &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &kp RET
 &UtilityL 0 2  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &kp RSHFT
                                 &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &mo 0      &kp RALT      &kp RCTRL
             >;
@@ -372,11 +400,11 @@
 
         Utility {
             bindings = <
-&bootloader  &sys_reset  &soft_off  &none  &none  &bt BT_CLR                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none        &none       &none      &none  &none  &none                       &none         &none         &none         &none         &none         &none
-&none        &none       &none      &none  &none  &none                       &none         &none         &none         &none         &none         &none
-&tog 2       &none       &none      &none  &none  &none       &none    &to 0  &none         &none         &none         &none         &none         &none
-                                    &none  &none  &none       &none    &none  &none         &none         &none
+&bootloader  &sys_reset  &soft_off  &none  &none  &bt BT_CLR                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none        &none       &none      &none  &none  &none                       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none        &none       &none      &none  &none  &none                       &none          &none          &none          &none          &none          &none
+&tog 2       &none       &none      &none  &none  &none       &none    &to 0  &none          &none          &none          &none          &none          &none
+                                    &none  &none  &none       &none    &none  &none          &none          &none
             >;
         };
 
