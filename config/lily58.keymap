@@ -329,7 +329,7 @@
             #binding-cells = <0>;
             layers = <1>;
             continue-list = <DOT COMMA BACKSPACE DELETE UNDERSCORE PIPE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH CLEAR KP_LPAR KP_RPAR EQUAL SINGLE_QUOTE DOUBLE_QUOTES QUESTION TAB>;
-            ignore-numbers;
+            ignore-alphas;
             ignore-modifiers;
         };
     };
