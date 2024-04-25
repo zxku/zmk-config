@@ -304,13 +304,13 @@
             require-prior-idle-ms = <500>;
         };
 
-        ClrBT: ClrBT {
+        ResetIt: ResetIt {
             compatible = "zmk,behavior-hold-tap";
-            label = "CLRBT";
-            bindings = <&bt BT_CLR>, <&none>;
+            label = "RESETIT";
+            bindings = <&sys_reset>, <&none>;
 
-            #binding-cells = <0>;
-            tapping-term-ms = <3000>;
+            #binding-cells = <2>;
+            tapping-term-ms = <5000>;
             require-prior-idle-ms = <500>;
         };
     };
@@ -416,11 +416,11 @@
 
         Utility {
             bindings = <
-&Boot 0 0  &none  &none  &ext_power EP_TOG  &none  &bt BT_CLR                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none      &none  &none  &none              &none  &none                       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none      &none  &none  &none              &none  &none                       &none          &none          &none          &none          &none          &none
-&tog 2     &none  &none  &none              &none  &none       &none    &none  &none          &none          &none          &none          &none          &none
-                         &none              &none  &none       &none    &none  &none          &none          &none
+&Boot 0 0  &ResetIt 0 0  &none  &ext_power EP_TOG  &none  &bt BT_CLR                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none      &none         &none  &none              &none  &none                              &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none      &none         &none  &none              &none  &none                              &none          &none          &none          &none          &none          &none
+&tog 2     &none         &none  &none              &none  &none       &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
+                                &none              &none  &none       &none    &none         &none          &none          &none
             >;
         };
 
