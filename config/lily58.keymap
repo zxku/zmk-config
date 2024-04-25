@@ -317,14 +317,14 @@
 //            require-prior-idle-ms = <500>;
 //        };
 
-//        StkAlph: StkAlph {
-//            compatible = "zmk,behavior-caps-word";
-//            label = "STKALPH";
-//            #binding-cells = <0>;
-//            layers = <0>;
-//            continue-list = <BACKSPACE DELETE UNDERSCORE PIPE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE SINGLE_QUOTE DOUBLE_QUOTES QUESTION LSHIFT RSHIFT>;
-//            ignore-alphas;
-//        };
+        StkAlph: StkAlph {
+            compatible = "zmk,behavior-caps-word";
+            label = "STKALPH";
+            #binding-cells = <0>;
+            layers = <0>;
+            continue-list = <BACKSPACE DELETE UNDERSCORE PIPE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE SINGLE_QUOTE DOUBLE_QUOTES QUESTION LSHIFT RSHIFT>;
+            ignore-alphas;
+        };
     };
 
     combos {
