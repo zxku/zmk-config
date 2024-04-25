@@ -313,6 +313,25 @@
             tapping-term-ms = <3000>;
             require-prior-idle-ms = <500>;
         };
+
+        ClearBT: ClearBT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CLEARBT";
+            bindings = <&bt>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
+        };
+
+        tempAlpha: tempAlpha {
+            compatible = "zmk,behavior-caps-word";
+            label = "TEMPALPHA";
+            #binding-cells = <0>;
+            layers = <1>;
+            continue-list = <DOT COMMA BACKSPACE DELETE UNDERSCORE PIPE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH CLEAR KP_LPAR KP_RPAR EQUAL SINGLE_QUOTE DOUBLE_QUOTES QUESTION TAB>;
+            ignore-numbers;
+            ignore-modifiers;
+        };
     };
 
     combos {
@@ -416,11 +435,11 @@
 
         Utility {
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &soft_off  &none  &none  &bt BT_CLR                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none      &none         &none      &none  &none  &none                              &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none      &none         &none      &none  &none  &none                              &none          &none          &none          &none          &none          &none
-&tog 2     &none         &none      &none  &none  &none       &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
-                                    &none  &none  &none       &none    &none         &none          &none          &none
+&Boot 0 0  &ResetIt 0 0  &soft_off  &out OUT_TOG  &none  &ClearBT BT_CLR 0                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none      &none         &none      &none         &none  &none                                     &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none      &none         &none      &none         &none  &none                                     &none          &none          &none          &none          &none          &none
+&tog 2     &none         &none      &none         &none  &none              &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
+                                    &none         &none  &none              &none    &none         &none          &none          &none
             >;
         };
 
