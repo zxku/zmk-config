@@ -298,15 +298,15 @@
             tapping-term-ms = <5000>;
             require-prior-idle-ms = <500>;
         };
-//
-//        ClrBT: ClrBT {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "CLRBT";
-//            bindings = <&bt>, <&none>;
-//            #binding-cells = <2>;
-//            tapping-term-ms = <2000>;
-//            require-prior-idle-ms = <500>;
-//        };
+
+        ClrBT: ClrBT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CLRBT";
+            bindings = <&bt BT_CLR>, <&none>;
+            #binding-cells = <0>;
+            tapping-term-ms = <3000>;
+            require-prior-idle-ms = <500>;
+        };
 
         ResetIt: ResetIt {
             compatible = "zmk,behavior-hold-tap";
@@ -428,7 +428,7 @@
 
         Utility {
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &none  &ext_power EP_TOG  &none  &ClearBT BT_CLR 0                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&Boot 0 0  &ResetIt 0 0  &none  &ext_power EP_TOG  &none  &ClearBT                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none      &none         &none  &none              &none  &none                                     &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none      &none         &none  &none              &none  &none                                     &none          &none          &none          &none          &none          &none
 &tog 2     &none         &none  &none              &none  &none              &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
