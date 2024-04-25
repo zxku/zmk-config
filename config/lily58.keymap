@@ -403,6 +403,22 @@
         };
     };
 
+    &soft_off {
+        hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+    };
+
+    &ext_power {
+        hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
+    };
+
+    &bootloader {
+        hold-time-ms = <5000>; // Only turn off if the key is held for 5 seconds or longer.
+    };
+
+    &sys_reset {
+        hold-time-ms = <5000>; // Only turn off if the key is held for 5 seconds or longer.
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
