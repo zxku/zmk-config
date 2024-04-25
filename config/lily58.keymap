@@ -336,7 +336,9 @@
             compatible = "zmk,behavior-caps-word";
             label = "TEMPALF";
             #binding-cells = <0>;
-            continue-list = <PERIOD>;
+            layers = <0>;
+            continue-list = <BACKSPACE DELETE UNDERSCORE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK SLASH BACKSLASH SINGLE_QUOTE DOUBLE_QUOTES QUESTION>;
+            ignore-alphas;
         };
     };
 
