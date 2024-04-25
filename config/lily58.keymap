@@ -258,7 +258,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "UTILITYL";
             bindings = <&sl>, <&to>;
-
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
@@ -271,7 +270,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "A_KEY";
             bindings = <&kp A>, <&kp C>;
-
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
@@ -280,7 +278,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "S_KEY";
             bindings = <&kp S>, <&kp LC(Y)>;
-
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
@@ -289,7 +286,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "D_KEY";
             bindings = <&kp D>, <&kp LC(Y)>;
-
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
@@ -298,17 +294,15 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BOOT";
             bindings = <&bootloader>, <&none>;
-
             #binding-cells = <2>;
             tapping-term-ms = <5000>;
             require-prior-idle-ms = <500>;
         };
 
-        ClearBT: ClearBT {
+        ClrBT: ClrBT {
             compatible = "zmk,behavior-hold-tap";
-            label = "CLEARBT";
+            label = "CLRBT";
             bindings = <&bt>, <&none>;
-
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
             require-prior-idle-ms = <500>;
@@ -318,10 +312,18 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RESETIT";
             bindings = <&sys_reset>, <&none>;
-
             #binding-cells = <2>;
             tapping-term-ms = <5000>;
             require-prior-idle-ms = <500>;
+        };
+
+        StkAlph: StkAlph {
+            compatible = "zmk,behavior-caps-word";
+            label = "STKALPH";
+            #binding-cells = <0>;
+            layers = <0>;
+            continue-list = <BACKSPACE DELETE UNDERSCORE PIPE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE SINGLE_QUOTE DOUBLE_QUOTES QUESTION LSHIFT RSHIFT>;
+            ignore-alphas;
         };
     };
 
