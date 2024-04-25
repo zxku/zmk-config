@@ -234,6 +234,14 @@
             wait-ms = <30>;
             tap-ms = <30>;
         };
+
+        ClrBT: ClrBT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&bt BT_CLR>;
+
+            label = "CLRBT";
+        };
     };
 
     behaviors {
@@ -317,11 +325,11 @@
         BtClr: BtClr {
             compatible = "zmk,behavior-hold-tap";
             label = "BTCLR";
-            bindings = <&bt>, <&none>;
+            bindings = <&ClrBT>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <5000>;
-            require-prior-idle-ms = <500>;
+            require-prior-idle-ms = <200>;
         };
     };
 
