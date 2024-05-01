@@ -452,11 +452,11 @@
 
         Utility {
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &none  &ext_power EP_TOG  &none  &BtClr 0 0                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none      &none         &none  &none              &none  &none                              &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none      &none         &none  &none              &none  &none                              &none          &none          &none          &none          &none          &none
-&tog 2     &none         &none  &none              &none  &none       &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
-                                &none              &none  &none       &none    &none         &none          &none          &none
+&Boot 0 0  &ResetIt 0 0  &tog 5  &ext_power EP_TOG  &none  &BtClr 0 0                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none      &none         &none   &none              &none  &none                              &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none      &none         &none   &none              &none  &none                              &none          &none          &none          &none          &none          &none
+&tog 2     &none         &none   &none              &none  &none       &none    &ResetIt 0 0  &none          &none          &none          &none          &none          &none
+                                 &none              &none  &none       &none    &none         &none          &none          &none
             >;
         };
 
@@ -468,6 +468,35 @@
 &trans  &trans  &trans  &trans  &wireOff  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
             >;
+        };
+
+        Num_Keys {
+            bindings = <
+&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Transparent_Num_Activator {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Num_Keys_On {
+            if-layers = <1 5>;
+            then-layer = <4>;
         };
     };
 };
