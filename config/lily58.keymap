@@ -249,7 +249,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>;
+            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
         tempNav: tempNav {
