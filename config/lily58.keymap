@@ -296,10 +296,11 @@
         D_key: D_key {
             compatible = "zmk,behavior-mod-morph";
             label = "D_KEY";
-            bindings = <&kp D>, <&kp LC(Y)>;
+            bindings = <&kp D>, <&kp Y>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         Boot: Boot {
@@ -339,6 +340,16 @@
             layers = <0>;
             continue-list = <BACKSPACE DELETE UNDERSCORE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK SLASH BACKSLASH SINGLE_QUOTE DOUBLE_QUOTES QUESTION>;
             ignore-alphas;
+        };
+
+        ESC_Key: ESC_Key {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_KEY";
+            bindings = <&kp ESC>, <&kp LC(S)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
@@ -443,7 +454,7 @@
         SldWksNumb {
             bindings = <
 &kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &kp ESC                            &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
 &kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
 &UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
                                 &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &TempAlf   &kp RALT      &kp RCTRL
