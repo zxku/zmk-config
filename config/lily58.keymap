@@ -287,16 +287,17 @@
         S_key: S_key {
             compatible = "zmk,behavior-mod-morph";
             label = "S_KEY";
-            bindings = <&kp S>, <&kp LC(Y)>;
+            bindings = <&kp S>, <&kp Y>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         D_key: D_key {
             compatible = "zmk,behavior-mod-morph";
             label = "D_KEY";
-            bindings = <&kp D>, <&kp Y>;
+            bindings = <&kp D>, <&kp Z>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
