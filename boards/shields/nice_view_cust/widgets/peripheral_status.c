@@ -25,6 +25,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 LV_IMG_DECLARE(balloon);
 LV_IMG_DECLARE(mountain);
+LV_IMG_DECLARE(evangelion_ditherlicious);
+LV_IMG_DECLARE(gengar);
+LV_IMG_DECLARE(rayquaza);
+LV_IMG_DECLARE(evangelion2);
+
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -115,8 +120,30 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_canvas_set_buffer(top, widget->cbuf, CANVAS_SIZE, CANVAS_SIZE, LV_IMG_CF_TRUE_COLOR);
 
     lv_obj_t *art = lv_img_create(widget->obj);
-    bool random = sys_rand32_get() & 1;
-    lv_img_set_src(art, random ? &balloon : &mountain);
+    // Generate a random number between 0 and 3
+    uint32_t random_number = sys_rand32_get();
+    int random_index = random_number % 4;
+
+    lv_img_dsc_t *selected_image;
+    switch (random_index) {
+        case 0:
+            selected_image = &gengar;
+            break;
+        case 1:
+            selected_image = &rayquaza;
+            break;
+        case 2:
+            selected_image = &evangelion2;
+            break;
+        case 3:
+            selected_image = &evangelion_ditherlicious;
+            break;
+        default:
+            // Handle error or fallback option here
+            selected_image = &rayquaza; // Fallback to rayquaza in case of an error
+            break;
+    }
+    lv_img_set_src(art, selected_image);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
     sys_slist_append(&widgets, &widget->node);
