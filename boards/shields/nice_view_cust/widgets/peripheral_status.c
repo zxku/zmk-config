@@ -23,17 +23,17 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
-LV_IMG_DECLARE(witchblade_bit);
-LV_IMG_DECLARE(supergirl_bit);
-LV_IMG_DECLARE(closeup_bit);
-LV_IMG_DECLARE(kiani_bit);
-LV_IMG_DECLARE(sincity);
-LV_IMG_DECLARE(evil_bit);
-LV_IMG_DECLARE(croft_bit);
-LV_IMG_DECLARE(fathom_bit);
-LV_IMG_DECLARE(angryeye_bit);
+LV_IMG_DECLARE(WitchBlade_Bit);
+LV_IMG_DECLARE(SuperGirl_Bit);
+LV_IMG_DECLARE(Closeup_Bit);
+LV_IMG_DECLARE(Kiani_Bit1);
+LV_IMG_DECLARE(SinCity_3);
+LV_IMG_DECLARE(Evil2_Bit);
+LV_IMG_DECLARE(Croft_bit);
+LV_IMG_DECLARE(Fathom4_bit);
+LV_IMG_DECLARE(AngryEye_1_bit);
 LV_IMG_DECLARE(evil_cross_bit);
-LV_IMG_DECLARE(evil_smiley_bit);
+LV_IMG_DECLARE(Evil_Smiley_bit);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -131,32 +131,32 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_img_dsc_t *selected_image;
     switch (random_index) {
         case 0:
-            selected_image = &witchblade_bit;
+            selected_image = &WitchBlade_Bit;
             break;
         case 1:
-            selected_image = &supergirl_bit;
+            selected_image = &SuperGirl_Bit;
             break;
         case 2:
-            selected_image = &kiani_bit;
+            selected_image = &Kiani_Bit1;
             break;
         case 3:
-            selected_image = &closeup_bit;
+            selected_image = &Closeup_Bit;
             break;
          case 4:
-            selected_image = &croft_bit;
+            selected_image = &Croft_bit;
             break;
          case 5:
-            selected_image = &fathom_bit;
+            selected_image = &Fathom4_bit;
             break;
          case 6:
-            selected_image = &angryeye_bit;
+            selected_image = &AngryEye_1_bit;
             break;
          case 7:
-            selected_image = &evil_bit;
+            selected_image = &Evil2_Bit;
             break;
         default:
-           //  Handle error or fallback option here
-            selected_image = &witchblade_bit; // Fallback in case of an error
+             Handle error or fallback option here
+            selected_image = &WitchBlade_Bit; // Fallback in case of an error
         // &evil_cross_bit and & Evil_Smiley_bit were left unused 
         // Miho dress code was created but not addeed to the code 
    }
