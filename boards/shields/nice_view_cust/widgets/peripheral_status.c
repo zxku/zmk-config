@@ -125,29 +125,41 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     lv_obj_t *art = lv_img_create(widget->obj);
     // Generate a random number between 0 and 3
- //   uint32_t random_number = sys_rand32_get();
-  //  int random_index = random_number % 4;
+    uint32_t random_number = sys_rand32_get();
+    int random_index = random_number % 8;
 
-  //  lv_img_dsc_t *selected_image;
-   // switch (random_index) {
-   //     case 0:
-    //        selected_image = &gengar;
-    //        break;
-   //     case 1:
-   //         selected_image = &rayquaza;
-   //         break;
-   //     case 2:
-   //         selected_image = &evangelion2;
-   //         break;
-    //    case 3:
-        //    selected_image = &evangelion_ditherlicious;
-         //   break;
-       // default:
-            // Handle error or fallback option here
-           // selected_image = &rayquaza; // Fallback to rayquaza in case of an error
-           // break;
-  //  }
-    lv_img_set_src(art,  random ? &WitchBlade_Bit : &SuperGirl_Bit);
+    lv_img_dsc_t *selected_image;
+    switch (random_index) {
+        case 0:
+            selected_image = &WitchBlade_Bit;
+            break;
+        case 1:
+            selected_image = &SuperGirl_Bit;
+            break;
+        case 2:
+            selected_image = &Kiani_Bit1;
+            break;
+        case 3:
+            selected_image = &Closeup_Bit;
+            break;
+         case 4:
+            selected_image = &Croft_bit;
+            break;
+         case 5:
+            selected_image = &Fathom4_bit;
+            break;
+         case 6:
+            selected_image = &AngryEye_1_bit;
+            break;
+         case 7:
+            selected_image = &Evil2_Bit;
+            break;
+        default:
+             Handle error or fallback option here
+            selected_image = &WitchBlade_Bit; // Fallback in case of an error
+        // &evil_cross_bit and & Evil_Smiley_bit were left unused
+   }
+    lv_img_set_src(art, selected_image);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
     sys_slist_append(&widgets, &widget->node);
