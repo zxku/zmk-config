@@ -157,7 +157,8 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
         default:
              Handle error or fallback option here
             selected_image = &WitchBlade_Bit; // Fallback in case of an error
-        // &evil_cross_bit and & Evil_Smiley_bit were left unused
+        // &evil_cross_bit and & Evil_Smiley_bit were left unused 
+        // Miho dress code was created but not addeed to the code 
    }
     lv_img_set_src(art, selected_image);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
