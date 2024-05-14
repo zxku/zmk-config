@@ -23,13 +23,17 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
-LV_IMG_DECLARE(balloon);
-LV_IMG_DECLARE(mountain);
-LV_IMG_DECLARE(evangelion_ditherlicious);
-LV_IMG_DECLARE(gengar);
-LV_IMG_DECLARE(rayquaza);
-LV_IMG_DECLARE(evangelion2);
-
+LV_IMG_DECLARE(WitchBlade_Bit);
+LV_IMG_DECLARE(SuperGirl_Bit);
+LV_IMG_DECLARE(Closeup_Bit);
+LV_IMG_DECLARE(Kiani_Bit1);
+LV_IMG_DECLARE(SinCity_3);
+LV_IMG_DECLARE(Evil2_Bit);
+LV_IMG_DECLARE(Croft_bit);
+LV_IMG_DECLARE(Fathom4_bit);
+LV_IMG_DECLARE(AngryEye_1_bit);
+LV_IMG_DECLARE(evil_cross_bit);
+LV_IMG_DECLARE(Evil_Smiley_bit);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -121,29 +125,29 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     lv_obj_t *art = lv_img_create(widget->obj);
     // Generate a random number between 0 and 3
-    uint32_t random_number = sys_rand32_get();
-    int random_index = random_number % 4;
+ //   uint32_t random_number = sys_rand32_get();
+  //  int random_index = random_number % 4;
 
-    lv_img_dsc_t *selected_image;
-    switch (random_index) {
-        case 0:
-            selected_image = &gengar;
-            break;
-        case 1:
-            selected_image = &rayquaza;
-            break;
-        case 2:
-            selected_image = &evangelion2;
-            break;
-        case 3:
-            selected_image = &evangelion_ditherlicious;
-            break;
-        default:
+  //  lv_img_dsc_t *selected_image;
+   // switch (random_index) {
+   //     case 0:
+    //        selected_image = &gengar;
+    //        break;
+   //     case 1:
+   //         selected_image = &rayquaza;
+   //         break;
+   //     case 2:
+   //         selected_image = &evangelion2;
+   //         break;
+    //    case 3:
+        //    selected_image = &evangelion_ditherlicious;
+         //   break;
+       // default:
             // Handle error or fallback option here
-            selected_image = &rayquaza; // Fallback to rayquaza in case of an error
-            break;
-    }
-    lv_img_set_src(art, selected_image);
+           // selected_image = &rayquaza; // Fallback to rayquaza in case of an error
+           // break;
+  //  }
+    lv_img_set_src(art,  random ? &WitchBlade_Bit : &SuperGirl_Bit);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
     sys_slist_append(&widgets, &widget->node);
