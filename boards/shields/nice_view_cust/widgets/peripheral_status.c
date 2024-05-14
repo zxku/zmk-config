@@ -155,7 +155,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
             selected_image = &evil_bit;
             break;
         default:
-             Handle error or fallback option here
+           //  Handle error or fallback option here
             selected_image = &witchblade_bit; // Fallback in case of an error
         // &evil_cross_bit and & Evil_Smiley_bit were left unused 
         // Miho dress code was created but not addeed to the code 
