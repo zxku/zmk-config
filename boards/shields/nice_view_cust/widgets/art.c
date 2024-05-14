@@ -205,7 +205,7 @@ const lv_img_dsc_t supergirl_bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_CLOSEUP_BIT uint8_t 
-	Closeup_Bit_map[] = {
+	closeup_bit_map[] = {
   #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -284,14 +284,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_CLOSEUP_B
   0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x19, 0x0a, 0x07, 0x20, 0x50, 
 };
 
-const lv_img_dsc_t Closeup_Bit = {
+const lv_img_dsc_t closeup_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Closeup_Bit_map,
+  .data = closeup_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_KIANI_BIT1
@@ -299,7 +299,7 @@ const lv_img_dsc_t Closeup_Bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_KIANI_BIT1 uint8_t
-	Kiani_Bit1_map[] = {
+	kiani_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -378,14 +378,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_KIANI_BIT
   0x07, 0x02, 0x00, 0x00, 0x00, 0x20, 0x80, 0x00, 0x00, 0x02, 0x88, 0x21, 0x24, 0x40, 0xd1, 0x6c, 0xb5, 0x80, 
 };
 
-const lv_img_dsc_t Kiani_Bit1 = {
+const lv_img_dsc_t kiani_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Kiani_Bit1_map,
+  .data = kiani_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_SINCITY_3
@@ -393,7 +393,7 @@ const lv_img_dsc_t Kiani_Bit1 = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SINCITY_3 uint8_t 
-	SinCity_3_map[] = {
+	sincity_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -471,14 +471,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SINCITY_3
   0xff, 0xff, 0xff, 0xff, 0xff, 0xcf, 0x8f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x87, 0xf2, 0x7f, 0xff, 0xf0, 
 };
 
-const lv_img_dsc_t SinCity_3 = {
+const lv_img_dsc_t sincity = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 67,
   .data_size = 1214,
-  .data = SinCity_3_map,
+  .data = sincity_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_EVIL2_BIT
@@ -486,7 +486,7 @@ const lv_img_dsc_t SinCity_3 = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_EVIL2_BIT uint8_t 
-	Evil2_Bit_map[] = {
+	evil_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -565,14 +565,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_EVIL2_BIT
   0xff, 0xff, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 
 };
 
-const lv_img_dsc_t Evil2_Bit = {
+const lv_img_dsc_t evil_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Evil2_Bit_map,
+  .data = evil_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_EVIL_SMILEY_BIT
@@ -580,7 +580,7 @@ const lv_img_dsc_t Evil2_Bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_EVIL_SMILEY_BIT uint8_t 
-	Evil_Smiley_bit_map[] = {
+	evil_smiley_bit_map[] = {
  #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -659,14 +659,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_EVIL_SMIL
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 };
 
-const lv_img_dsc_t Evil_Smiley_bit = {
+const lv_img_dsc_t evil_smiley_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Evil_Smiley_bit_map,
+  .data = evil_smiley_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_CROFT_BIT
@@ -674,7 +674,7 @@ const lv_img_dsc_t Evil_Smiley_bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_CROFT_BIT uint8_t 
-	Croft_bit_map[] = {
+	croft_bit_map[] = {
  #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -752,14 +752,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_CROFT_BIT
   0x00, 0x28, 0x00, 0xa0, 0x00, 0x00, 0x01, 0x51, 0x49, 0x24, 0x21, 0x11, 0x40, 0x09, 0x22, 0x00, 0x25, 0x00, 
 };
 
-const lv_img_dsc_t Croft_bit = {
+const lv_img_dsc_t croft_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Croft_bit_map,
+  .data = croft_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_FATHOM4_BIT
@@ -767,7 +767,7 @@ const lv_img_dsc_t Croft_bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FATHOM4_BIT uint8_t 
-	Fathom4_bit_map[] = {
+	fathom_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -846,14 +846,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FATHOM4_B
   0x0e, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x01, 0xbf, 0x0b, 0xbc, 0x00, 0x00, 0x07, 0x80, 0x2d, 0xe2, 0xf0, 0x00, 
 };
 
-const lv_img_dsc_t Fathom4_bit = {
+const lv_img_dsc_t fathom_bit_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = Fathom4_bit_map,
+  .data = fathom_bit_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_ANGRYEYE_1_BIT
@@ -861,7 +861,7 @@ const lv_img_dsc_t Fathom4_bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_ANGRYEYE_1_BIT uint8_t
-	 AngryEye_1_bit_map[] = {
+	 angryeye_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -940,14 +940,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_ANGRYEYE_
   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf0, 
 };
 
-const lv_img_dsc_t AngryEye_1_bit = {
+const lv_img_dsc_t angryeye_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = AngryEye_1_bit_map,
+  .data = angryeye_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_EVIL_CROSS_BIT
