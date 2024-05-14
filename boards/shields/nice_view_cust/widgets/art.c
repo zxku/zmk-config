@@ -17,7 +17,7 @@
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_WITCHBLADE_BIT uint8_t 
-    WitchBlade_Bit_map[] = {
+    witchblade_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -96,14 +96,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_WITCHBLAD
   0x54, 0xa9, 0x2a, 0xa4, 0xaa, 0x80, 0x28, 0x05, 0x04, 0x16, 0xba, 0xc1, 0xfa, 0xa9, 0xdf, 0xea, 0xc0, 0x10, 
 };
 
-const lv_img_dsc_t WitchBlade_Bit = {
+const lv_img_dsc_t witchblade_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = WitchBlade_Bit_map,
+  .data = witchblade_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_SUPERGIRL_BIT
@@ -111,7 +111,7 @@ const lv_img_dsc_t WitchBlade_Bit = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SUPERGIRL_BIT uint8_t 
-	SuperGirl_Bit_map[] = {
+	supergirl_bit_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
@@ -190,14 +190,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SUPERGIRL
   0x40, 0x00, 0x00, 0x00, 0x83, 0x00, 0xae, 0x00, 0x80, 0x05, 0xed, 0xa0, 0x48, 0x28, 0x11, 0x0b, 0x22, 0x10, 
 };
 
-const lv_img_dsc_t SuperGirl_Bit = {
+const lv_img_dsc_t supergirl_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = SuperGirl_Bit_map,
+  .data = supergirl_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_CLOSEUP_BIT
