@@ -529,11 +529,11 @@
 
         Bottom_shift {
             bindings = <
-&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
-&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
-&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
-&trans  &kp FSLH  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp RSHFT
-                          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp B   &kp Z   &kp X   &kp C   &kp V   &trans    &kp B   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
