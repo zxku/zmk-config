@@ -430,6 +430,11 @@
             bindings = <&kp COLON>;
             key-positions = <22 23>;
         };
+
+        Row_Shift {
+            bindings = <&tog 7>;
+            key-positions = <37 38 39 40>;
+        };
     };
 
     keymap {
@@ -444,11 +449,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC        &kp EXCL   &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
-&kp TAB        &kp Q      &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
-&caps          &kp A      &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
-&UtilityL 2 1  &kp SLASH  &kp Z   &kp X      &kp C       &kp V        &kp LCTRL    &kp RIGHT_META  &kp B      &kp N          &kp M      &kp COMMA             &kp PERIOD             &kp RSHFT
-                                  &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &tempNav   &kp RALT       &kp RCTRL
+&kp ESC        &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp TAB        &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
+&caps          &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
+&UtilityL 2 1  &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp PERIOD            &kp SLASH              &kp RSHFT
+                                 &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &tempNav   &kp RALT       &kp RCTRL
             >;
         };
 
@@ -509,6 +514,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Bottom_shift {
+            bindings = <
+&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
+&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
+&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
+&trans  &kp FSLH  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp RSHFT
+                          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
