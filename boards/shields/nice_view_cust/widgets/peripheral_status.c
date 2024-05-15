@@ -125,43 +125,48 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     lv_obj_t *art = lv_img_create(widget->obj);
     // Generate a random number between 0 and 3
-    uint32_t random_number = sys_rand32_get();
-    int random_index = random_number % 8;
+//    uint32_t random_number = sys_rand32_get();
+ //   int random_index = random_number % 8;
 
-    lv_img_dsc_t *selected_image;
-    switch (random_index) {
-        case 0:
-            selected_image = &witchblade_bit;
-            break;
-        case 1:
-            selected_image = &supergirl_bit;
-            break;
-        case 2:
-            selected_image = &kiani_bit;
-            break;
-        case 3:
-            selected_image = &closeup_bit;
-            break;
-         case 4:
-            selected_image = &croft_bit;
-            break;
-         case 5:
-            selected_image = &fathom_bit;
-            break;
-         case 6:
-            selected_image = &angryeye_bit;
-            break;
-         case 7:
-            selected_image = &evil_bit;
-            break;
-        default:
+//    lv_img_dsc_t *selected_image;
+ //   switch (random_index) {
+  //      case 0:
+  //          selected_image = &witchblade_bit;
+  //          break;
+  //      case 1:
+  //          selected_image = &supergirl_bit;
+ //           break;
+   //     case 2:
+ //           selected_image = &kiani_bit;
+ //           break;
+ //       case 3:
+ //          selected_image = &closeup_bit;
+ //           break;
+ //        case 4:
+ //           selected_image = &croft_bit;
+ //           break;
+ //        case 5:
+ //           selected_image = &fathom_bit;
+ //           break;
+ //        case 6:
+  //          selected_image = &angryeye_bit;
+  //          break;
+  //       case 7:
+  //          selected_image = &evil_bit;
+  //          break;
+   //     default:
            //  Handle error or fallback option here
-            selected_image = &witchblade_bit; // Fallback in case of an error
+   //         selected_image = &witchblade_bit; // Fallback in case of an error
         // &evil_cross_bit and & Evil_Smiley_bit were left unused 
         // Miho dress code was created but not addeed to the code 
-   }
-    lv_img_set_src(art, selected_image);
+ \\  }
+    
+  \\  lv_img_set_src(art, selected_image);
+      bool random = sys_rand32_get() & 1;
+    lv_img_set_src(art, random ? &witchblade_bit : &kiani_bit);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
+
+    
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();
