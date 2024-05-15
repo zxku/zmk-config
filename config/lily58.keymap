@@ -268,11 +268,11 @@
             bindings = <&sl>, <&to>;
 
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <90>;
             require-prior-idle-ms = <500>;
-            hold-trigger-key-positions = <0 1 2 5 6 7 8 9 10 18 19 20 21 22 43 3 4 42>;
+            hold-trigger-key-positions = <0 1 2 5 6 7 8 9 10 18 19 20 21 22 43 3 4 42 36>;
         };
 
         A_key: A_key {
