@@ -517,6 +517,16 @@
             >;
         };
 
+        Bottom_Activator {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
         Bottom_shift {
             bindings = <
 &trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
@@ -524,16 +534,6 @@
 &trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans   &trans
 &trans  &kp FSLH  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp RSHFT
                           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
-        Bottom_Row {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
@@ -552,8 +552,8 @@
         };
 
         Row1 {
-            if-layers = <0 8>;
-            then-layer = <7>;
+            if-layers = <0 7>;
+            then-layer = <8>;
         };
     };
 };
