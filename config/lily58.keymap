@@ -432,7 +432,7 @@
         };
 
         Row_Shift {
-            bindings = <&tog 7>;
+            bindings = <&tog 8>;
             key-positions = <37 38 39 40>;
         };
     };
@@ -526,6 +526,16 @@
                           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
+
+        Bottom_Row {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
@@ -539,6 +549,11 @@
         Wire_Frame_On {
             if-layers = <1 5>;
             then-layer = <3>;
+        };
+
+        Row1 {
+            if-layers = <0 8>;
+            then-layer = <7>;
         };
     };
 };
