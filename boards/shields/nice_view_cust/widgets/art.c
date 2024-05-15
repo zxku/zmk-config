@@ -846,14 +846,14 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FATHOM4_B
   0x0e, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x01, 0xbf, 0x0b, 0xbc, 0x00, 0x00, 0x07, 0x80, 0x2d, 0xe2, 0xf0, 0x00, 
 };
 
-const lv_img_dsc_t fathom_bit_bit = {
+const lv_img_dsc_t fathom_bit = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
   .header.w = 140,
   .header.h = 68,
   .data_size = 1232,
-  .data = fathom_bit_bit_map,
+  .data = fathom_bit_map,
 };
 
 #ifndef LV_ATTRIBUTE_IMG_ANGRYEYE_1_BIT
