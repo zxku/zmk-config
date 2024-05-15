@@ -159,9 +159,9 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
    //         selected_image = &witchblade_bit; // Fallback in case of an error
         // &evil_cross_bit and & Evil_Smiley_bit were left unused 
         // Miho dress code was created but not addeed to the code 
- \\  }
+   //}
     
-  \\  lv_img_set_src(art, selected_image);
+  //  lv_img_set_src(art, selected_image);
       bool random = sys_rand32_get() & 1;
     lv_img_set_src(art, random ? &witchblade_bit : &kiani_bit);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
