@@ -458,6 +458,11 @@
             bindings = <&kp M>;
             key-positions = <26 27>;
         };
+
+        snip {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <24 25 26>;
+        };
     };
 
     keymap {
