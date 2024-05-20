@@ -206,7 +206,7 @@
         wireOn: wire {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp Q &tog 5>;
+            bindings = <&macro_tap>, <&kp Q &tog 4>;
 
             label = "WIRE";
         };
@@ -214,7 +214,7 @@
         wireOff: wireOff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LA(Q) &tog 5>;
+            bindings = <&macro_tap>, <&kp LA(Q) &tog 4>;
 
             label = "WIREOFF";
         };
@@ -440,7 +440,7 @@
         };
 
         Row_Shift {
-            bindings = <&tog 7>;
+            bindings = <&tog 8>;
             key-positions = <37 38 39 40>;
         };
 
@@ -497,7 +497,7 @@
 
         Utility {
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&Boot 0 0  &ResetIt 0 0  &tog 5  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none      &none         &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none      &none         &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
 &tog 2     &none         &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
@@ -512,16 +512,6 @@
 &trans  &trans  &trans  &trans  &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &wireOff  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
-        Num_Keys {
-            bindings = <
-&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -542,6 +532,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Num_Keys {
+            bindings = <
+&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -570,17 +570,17 @@
         compatible = "zmk,conditional-layers";
 
         Num_Keys_On {
-            if-layers = <1 6>;
-            then-layer = <4>;
+            if-layers = <1 5>;
+            then-layer = <7>;
         };
 
         Wire_Frame_On {
-            if-layers = <1 5>;
+            if-layers = <1 4>;
             then-layer = <3>;
         };
 
         Row1 {
-            if-layers = <0 7>;
+            if-layers = <0 8>;
             then-layer = <8>;
         };
     };
