@@ -467,7 +467,7 @@
         };
 
         Row_Shift {
-            bindings = <&tog 8>;
+            bindings = <&tog 0>;
             key-positions = <37 38 39 40>;
         };
 
@@ -571,26 +571,6 @@
                                                    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
-
-        Bottom_Activator {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
-        Bottom_shift {
-            bindings = <
-&trans  &trans     &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RCTRL  &kp Z   &kp X   &kp C   &kp V   &trans    &kp B   &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -598,17 +578,12 @@
 
         Num_Keys_On {
             if-layers = <1 5>;
-            then-layer = <7>;
+            then-layer = <6>;
         };
 
         Wire_Frame_On {
             if-layers = <1 4>;
             then-layer = <3>;
-        };
-
-        Row1 {
-            if-layers = <0 8>;
-            then-layer = <8>;
         };
     };
 };
