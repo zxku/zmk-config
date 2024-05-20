@@ -434,7 +434,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-            display-name   = "QWERTY"
+            display-name   = "QWERTY";
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -453,7 +453,7 @@
         };
 
         SldWksNumb {
-            display-name   = "Sld___Wks"
+            display-name   = "Sld___Wks";
             bindings = <
 &kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
 &kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
@@ -464,7 +464,7 @@
         };
 
         Utility {
-            display-name   = "Utility"
+            display-name   = "Utility";
             bindings = <
 &Boot 0 0  &ResetIt 0 0  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none      &none         &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
@@ -495,7 +495,7 @@
         };
 
         Transparent_Wire_Activator {
-            display-name   = "Wire"
+            display-name   = "Wire";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -506,7 +506,7 @@
         };
 
         Transparent_Num_Activator {
-            display-name   = "KpNum"
+            display-name   = "KpNum";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
