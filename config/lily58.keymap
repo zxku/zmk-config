@@ -377,6 +377,16 @@
             #binding-cells = <0>;
             bindings = <&tempNav>, <&tog 1>;
         };
+
+        NavMod: NavMod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAVMOD";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -504,11 +514,11 @@
 
         SldWksNumb {
             bindings = <
-&kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
-&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
-&UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
-                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &mo 0      &kp RALT      &kp RCTRL
+&kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
+&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
+&UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
+                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 0  &kp RALT      &kp RCTRL
             >;
         };
 
