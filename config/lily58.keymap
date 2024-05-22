@@ -253,9 +253,9 @@
     };
 
     behaviors {
-        caps: caps {
+        capwd: capwd {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPS";
+            label = "CAPWD";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
         };
@@ -517,7 +517,7 @@
             bindings = <
 &kp ESC        &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &kp TAB        &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
-&caps          &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
+&capwd         &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
 &UtilityL 2 1  &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp PERIOD            &kp SLASH              &kp RSHFT
                                  &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &RMod 1 0  &kp RALT       &kp RCTRL
             >;
