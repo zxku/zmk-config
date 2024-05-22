@@ -257,7 +257,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
         };
 
         tempNav: tempNav {
@@ -386,6 +386,16 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
+        };
+
+        ccaps: ccaps {
+            compatible = "zmk,behavior-caps-word";
+            label = "CCAPS";
+            #binding-cells = <0>;
+            layers = <1>;
+            continue-list = <DOT COMMA UNDERSCORE PIPE AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW HOME END EQUAL EXCLAMATION>;
+            ignore-numbers;
+            ignore-modifiers;
         };
     };
 
