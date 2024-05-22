@@ -258,6 +258,8 @@
             label = "CAPWD";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
+
+            tapping-term-ms = <400>;
         };
 
         tempNav: tempNav {
