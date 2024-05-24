@@ -140,7 +140,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
             selected_image = &kiani_bit;
             break;
         case 3:
-           selected_image = &sincity_map;
+           selected_image = &sincity;
             break;
          case 4:
             selected_image = &angryeye_bit;
