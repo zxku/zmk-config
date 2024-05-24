@@ -206,7 +206,7 @@
         wireOn: wire {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp Q &tog 5>;
+            bindings = <&macro_tap>, <&kp Q &tog 4>;
 
             label = "WIRE";
         };
@@ -214,7 +214,7 @@
         wireOff: wireOff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LA(Q) &tog 5>;
+            bindings = <&macro_tap>, <&kp LA(Q) &tog 4>;
 
             label = "WIREOFF";
         };
@@ -242,14 +242,24 @@
 
             label = "CLRBT";
         };
+
+        milli: milli {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp M &kp M>;
+
+            label = "MILLI";
+        };
     };
 
     behaviors {
-        caps: caps {
+        capwd: capwd {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPS";
+            label = "CAPWD";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
+
+            tapping-term-ms = <400>;
         };
 
         tempNav: tempNav {
@@ -257,7 +267,7 @@
             label = "TEMPNAV";
             #binding-cells = <0>;
             layers = <1>;
-            continue-list = <DOT COMMA BACKSPACE DELETE UNDERSCORE RETURN PIPE KP_DIVIDE KP_SLASH KP_MULTIPLY KP_ASTERISK KP_MINUS KP_SUBTRACT KP_PLUS KP_ENTER KP_NUMBER_1 KP_N1 KP_NUMBER_2 KP_N2 KP_NUMBER_3 KP_N3 KP_NUMBER_4 KP_N4 KP_NUMBER_5 KP_N5 KP_NUMBER_6 KP_N6 KP_NUMBER_7 KP_N7 KP_NUMBER_8 KP_N8 KP_NUMBER_9 KP_N9 KP_NUMBER_0 KP_N0 KP_DOT KP_EQUAL KP_COMMA KP_EQUAL_AS400 KP_LEFT_PARENTHESIS KP_RIGHT_PARENTHESIS KP_CLEAR EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH ENTER RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW CLEAR KP_LPAR KP_RPAR HOME END EQUAL SINGLE_QUOTE DOUBLE_QUOTES QUESTION TAB>;
+            continue-list = <DOT COMMA BACKSPACE UNDERSCORE RETURN PIPE KP_DIVIDE KP_SLASH KP_MULTIPLY KP_ASTERISK KP_MINUS KP_SUBTRACT KP_PLUS KP_ENTER KP_NUMBER_1 KP_N1 KP_NUMBER_2 KP_N2 KP_NUMBER_3 KP_N3 KP_NUMBER_4 KP_N4 KP_NUMBER_5 KP_N5 KP_NUMBER_6 KP_N6 KP_NUMBER_7 KP_N7 KP_NUMBER_8 KP_N8 KP_NUMBER_9 KP_N9 KP_NUMBER_0 KP_N0 KP_DOT KP_EQUAL KP_COMMA KP_EQUAL_AS400 KP_LEFT_PARENTHESIS KP_RIGHT_PARENTHESIS KP_CLEAR EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH ENTER RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW KP_LPAR KP_RPAR HOME END EQUAL TAB>;
             ignore-numbers;
             ignore-modifiers;
         };
@@ -352,6 +362,43 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        RMod: RMod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RMOD";
+            bindings = <&mo>, <&ModTap>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
+        ModTap: ModTap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODTAP";
+            #binding-cells = <0>;
+            bindings = <&tempNav>, <&tog 1>;
+        };
+
+        NavMod: NavMod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAVMOD";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
+        ccaps: ccaps {
+            compatible = "zmk,behavior-caps-word";
+            label = "CCAPS";
+            #binding-cells = <0>;
+            layers = <1>;
+            continue-list = <DOT COMMA UNDERSCORE PIPE AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW HOME END EQUAL EXCLAMATION>;
+            ignore-numbers;
+            ignore-modifiers;
+        };
     };
 
     combos {
@@ -428,13 +475,38 @@
 
         col {
             bindings = <&kp COLON>;
-            key-positions = <22 23>;
+            key-positions = <34 35>;
+        };
+
+        Row_Shift {
+            bindings = <&tog 0>;
+            key-positions = <37 38 39 40>;
+        };
+
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <2 3>;
+        };
+
+        inch {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <14 15>;
+        };
+
+        millimeter {
+            bindings = <&milli>;
+            key-positions = <26 27>;
+        };
+
+        snip {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <24 25 26>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-            display-name   = "QWERTY";
+
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -443,30 +515,31 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
+            display-name = "QWERTY";
             bindings = <
 &kp ESC        &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &kp TAB        &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
-&caps          &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
-&UtilityL 2 1  &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp DOT               &kp FSLH               &kp RSHFT
-                                 &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &tempNav   &kp RALT       &kp RCTRL
+&capwd         &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
+&UtilityL 2 1  &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp PERIOD            &kp SLASH              &kp RSHFT
+                                 &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &RMod 1 0  &kp RALT       &kp RCTRL
             >;
         };
 
         SldWksNumb {
-            display-name   = "Sld___Wks";
+            display-name = "CAD";
             bindings = <
-&kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL  &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam      &square       &kp HOME      &kp UP     &littledelta  &Theta
-&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro     &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
-&UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree    &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
-                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &TempAlf   &kp RALT      &kp RCTRL
+&kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
+&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
+&UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
+                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 0  &kp RALT      &kp RCTRL
             >;
         };
 
         Utility {
-            display-name   = "Utility";
+            display-name = "Utility";
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&Boot 0 0  &ResetIt 0 0  &tog 5  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none      &none         &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none      &none         &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
 &tog 2     &none         &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
@@ -484,18 +557,8 @@
             >;
         };
 
-        Num_Keys {
-            bindings = <
-&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
         Transparent_Wire_Activator {
-            display-name   = "Wire";
+            display-name = "Wire";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -506,7 +569,6 @@
         };
 
         Transparent_Num_Activator {
-            display-name   = "KpNum";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -515,18 +577,29 @@
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
+
+        Num_Keys {
+            display-name = "KpNum";
+            bindings = <
+&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         Num_Keys_On {
-            if-layers = <1 6>;
-            then-layer = <4>;
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
 
         Wire_Frame_On {
-            if-layers = <1 5>;
+            if-layers = <1 4>;
             then-layer = <3>;
         };
     };
