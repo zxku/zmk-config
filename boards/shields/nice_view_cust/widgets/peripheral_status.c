@@ -126,7 +126,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t *art = lv_img_create(widget->obj);
     
     uint32_t random_number = sys_rand32_get();
-    int random_index = random_number % 8;
+    int random_index = random_number % 6;
 
     lv_img_dsc_t *selected_image;
     switch (random_index) {
@@ -140,19 +140,13 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
             selected_image = &kiani_bit;
             break;
         case 3:
-           selected_image = &closeup_bit;
+           selected_image = &sincity_map;
             break;
          case 4:
-            selected_image = &croft_bit;
+            selected_image = &angryeye_bit;
             break;
          case 5:
             selected_image = &fathom_bit;
-            break;
-         case 6:
-            selected_image = &angryeye_bit;
-            break;
-         case 7:
-            selected_image = &evil_bit;
             break;
         default:
            selected_image = &witchblade_bit; // Fallback in case of an error
