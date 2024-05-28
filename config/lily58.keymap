@@ -524,7 +524,7 @@
         };
 
         SldWksNumb {
-            display-name = "███#███";
+            display-name = "■■■■■■■";
             bindings = <
 &kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
 &kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
@@ -537,7 +537,7 @@
         Utility {
             display-name = "Utility";
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &tog 5  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&Boot 0 0  &ResetIt 0 0  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none      &none         &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none      &none         &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
 &tog 2     &none         &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
@@ -566,6 +566,16 @@
             >;
         };
 
+        Num_Keys {
+            bindings = <
+&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
         Transparent_Num_Activator {
             display-name = "KpNum";
             bindings = <
@@ -576,24 +586,14 @@
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
-
-        Num_Keys {
-            bindings = <
-&kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9        &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         Num_Keys_On {
-            if-layers = <1 5>;
-            then-layer = <6>;
+            if-layers = <1 6>;
+            then-layer = <5>;
         };
 
         Wire_Frame_On {
