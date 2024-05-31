@@ -314,26 +314,6 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        Boot: Boot {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BOOT";
-            bindings = <&bootloader>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <5000>;
-            require-prior-idle-ms = <500>;
-        };
-
-        ResetIt: ResetIt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RESETIT";
-            bindings = <&sys_reset>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <5000>;
-            require-prior-idle-ms = <500>;
-        };
-
         BtClr: BtClr {
             compatible = "zmk,behavior-hold-tap";
             label = "BTCLR";
@@ -383,7 +363,7 @@
         NavMod: NavMod {
             compatible = "zmk,behavior-hold-tap";
             label = "NAVMOD";
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
@@ -476,11 +456,6 @@
             key-positions = <34 35>;
         };
 
-        Row_Shift {
-            bindings = <&tog 0>;
-            key-positions = <37 38 39 40>;
-        };
-
         equals {
             bindings = <&kp EQUAL>;
             key-positions = <2 3>;
@@ -530,18 +505,18 @@
 &kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
 &kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
 &UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
-                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 0  &kp RALT      &kp RCTRL
+                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 1  &kp RALT      &kp RCTRL
             >;
         };
 
         Utility {
             display-name = "Utility";
             bindings = <
-&Boot 0 0  &ResetIt 0 0  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none      &none         &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none      &none         &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
-&tog 2     &none         &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
-                                 &none              &none  &none       &none    &none   &none          &none          &none
+&trans  &none  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none   &none  &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none   &none  &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
+&tog 2  &none  &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
+                       &none              &none  &none       &none    &none   &none          &none          &none
             >;
         };
 
