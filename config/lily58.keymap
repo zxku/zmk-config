@@ -488,7 +488,7 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "QWERTY";
+            display-name = "abc";
             bindings = <
 &kp ESC        &kp EXCL  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &kp TAB        &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
@@ -550,6 +550,7 @@
                                                    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
+
 
         Transparent_Num_Activator {
             display-name = "KpNum";
