@@ -501,11 +501,11 @@
         SldWksNumb {
             display-name = "||||||||||||||||||||||||";
             bindings = <
-&kp N7         &kp N8  &kp N9   &kp FSLH   &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp STAR   &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
-&kp N1         &kp N2  &kp N3   &kp MINUS  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
-&UtilityL 2 0  &kp N0  &kp DOT  &kp PLUS   &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
-                                &kp RET    &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 1  &kp RALT      &kp RCTRL
+&kp N7         &kp N8  &kp N9   &kp KP_DIVIDE    &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
+&kp N4         &kp N5  &kp N6   &kp KP_MULTIPLY  &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N1         &kp N2  &kp N3   &kp KP_SUBTRACT  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
+&UtilityL 2 0  &kp N0  &kp DOT  &kp KP_PLUS      &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
+                                &kp RET          &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 1  &kp RALT      &kp RCTRL
             >;
         };
 
@@ -550,7 +550,6 @@
                                                    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
-
 
         Transparent_Num_Activator {
             display-name = "KpNum";
