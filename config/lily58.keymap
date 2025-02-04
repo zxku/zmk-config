@@ -334,7 +334,7 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        ESC_key: ESC_key {
+        ESC_Key: ESC_Key {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_KEY";
             bindings = <&kp ESCAPE>, <&kp S>;
@@ -460,18 +460,18 @@
 &kp TAB        &kp Q     &kp W   &kp E      &kp R       &kp T                                     &kp Y      &kp U          &kp I      &kp O                 &kp P                  &kp BACKSLASH
 &capwd         &kp A     &kp S   &kp D      &kp F       &kp G                                     &kp H      &kp J          &kp K      &kp L                 &kp SINGLE_QUOTE       &kp ENTER
 &UtilityL 2 1  &kp Z     &kp X   &kp C      &kp V       &kp B        &kp LCTRL    &kp RIGHT_META  &kp N      &kp M          &kp COMMA  &kp PERIOD            &kp SLASH              &kp RSHFT
-                                 &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &RMod 1 0  &kp RALT       &kp RCTRL
+                                 &kp ENTER  &kp LALT    &kp LSHFT    &kp SPACE    &kp SPACE       &RMod 1 1  &kp RALT       &kp RCTRL
             >;
         };
 
         SldWksNumb {
             display-name = "||||||||||||||||||||||||";
             bindings = <
-&kp N7         &kp N8  &kp N9   &kp KP_DIVIDE    &kp BSPC  &kp DEL                            &kp EQUAL    &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
-&kp N4         &kp N5  &kp N6   &kp KP_MULTIPLY  &A_key    &ESC_Key                           &Diam        &square       &kp HOME      &kp UP     &littledelta  &Theta
-&kp N1         &kp N2  &kp N3   &kp KP_SUBTRACT  &D_key    &S_key                             &Micro       &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
-&UtilityL 2 0  &kp N0  &kp DOT  &kp KP_PLUS      &wireOn   &kp TAB    &kp LCTRL    &trans     &degree      &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
-                                &kp RET          &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &NavMod 0 1  &kp RALT      &kp RCTRL
+&kp N7         &kp N8  &kp N9   &kp KP_DIVIDE    &kp BSPC  &kp DEL                            &kp EQUAL     &plusminus    &greaterthan  &lessthan  &NotEqual     &kp BSPC
+&kp N4         &kp N5  &kp N6   &kp KP_MULTIPLY  &A_key    &ESC_Key                           &Diam         &square       &kp HOME      &kp UP     &littledelta  &Theta
+&kp N1         &kp N2  &kp N3   &kp KP_SUBTRACT  &D_key    &S_key                             &Micro        &approxequal  &kp LEFT      &kp DOWN   &kp RIGHT     &trans
+&UtilityL 2 0  &kp N0  &kp DOT  &kp KP_PLUS      &wireOn   &kp TAB    &kp LCTRL    &trans     &degree       &kp TILDE     &kp END       &pi        &kp GRAVE     &trans
+                                &kp RET          &kp LALT  &kp LSHFT  &kp SPACE    &kp SPACE  &Nav_Mod 0 1  &kp RALT      &kp RCTRL
             >;
         };
 
