@@ -327,37 +327,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RMOD";
             #binding-cells = <2>;
-            bindings = <&mo>, <&ModTap>;
+            bindings = <&mo>, <&tog_off>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
         };
-
-        ModTap: ModTap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MODTAP";
-            bindings = <&none>, <&tog 1>;
-
-            #binding-cells = <0>;
-        };
-
-        RMod: RMod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RMOD";
-            bindings = <&mo>, <&ModTap>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-        };
-
-        ModTap: ModTap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MODTAP";
-            #binding-cells = <0>;
-            bindings = <&tempNav>, <&tog 1>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
