@@ -253,19 +253,13 @@
     };
 
     behaviors {
+        capwd: capwd {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            label = "CAPWD";
+            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
 
-        tog_on: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer On";
-            toggle-mode = "on";
-        };
-
-        tog_off: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
+            tapping-term-ms = <400>;
         };
 
         capwd: capwd {
@@ -319,16 +313,6 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        D_key: D_key {
-            compatible = "zmk,behavior-mod-morph";
-            label = "D_KEY";
-            bindings = <&kp D>, <&kp Z>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
         BtClr: BtClr {
             compatible = "zmk,behavior-hold-tap";
             label = "BTCLR";
@@ -339,23 +323,22 @@
             require-prior-idle-ms = <200>;
         };
 
-        TempAlf: TempAlf {
-            compatible = "zmk,behavior-caps-word";
-            label = "TEMPALF";
-            #binding-cells = <0>;
-            layers = <0>;
-            continue-list = <BACKSPACE DELETE UNDERSCORE EXCLAMATION AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND ASTERISK SLASH BACKSLASH SINGLE_QUOTE DOUBLE_QUOTES QUESTION>;
-            ignore-alphas;
+        RMod: RMod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RMOD";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&ModTap>;
+
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
         };
 
-        ESC_Key: ESC_Key {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ESC_KEY";
-            bindings = <&kp ESC>, <&kp LC(S)>;
+        ModTap: ModTap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODTAP";
+            bindings = <&none>, <&tog 1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
         };
 
         RMod: RMod {
@@ -373,24 +356,6 @@
             label = "MODTAP";
             #binding-cells = <0>;
             bindings = <&tempNav>, <&tog 1>;
-        };
-
-        NavMod: NavMod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NAVMOD";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-        };
-
-        ccaps: ccaps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CCAPS";
-            #binding-cells = <0>;
-            layers = <1>;
-            continue-list = <DOT COMMA UNDERSCORE PIPE AT_SIGN HASH DOLLAR PERCENT CARET AMPERSAND LEFT_PARENTHESIS LEFT_BRACKET LEFT_BRACE RIGHT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACE PERIOD SLASH BACKSLASH RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW HOME END EQUAL EXCLAMATION>;
         };
     };
 
