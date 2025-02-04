@@ -252,20 +252,11 @@
         };
     };
 
-    behaviors {
+behaviors {
         capwd: capwd {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             label = "CAPWD";
-            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
-
-            tapping-term-ms = <400>;
-        };
-
-        capwd: capwd {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPWD";
-            #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
 
             tapping-term-ms = <400>;
@@ -332,6 +323,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
         };
+};
 
     combos {
         compatible = "zmk,combos";
