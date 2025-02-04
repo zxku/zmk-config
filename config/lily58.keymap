@@ -308,7 +308,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RMOD";
             #binding-cells = <2>;
-            bindings = <&mo>, <&tog_off>;
+            bindings = <&mo>, <&tog_on>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
