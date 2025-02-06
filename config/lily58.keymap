@@ -443,8 +443,9 @@
         };
 
         kp_comma {
-            bindings = <&kp KP_COMMA>;
-            key-positions = <37 39 38>;
+            bindings = <&kp COMMA>;
+            key-positions = <24 25>;
+            timeout-ms = <20>;
         };
     };
 
