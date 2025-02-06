@@ -257,7 +257,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             label = "CAPWD";
-            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
 
             tapping-term-ms = <400>;
         };
@@ -440,6 +440,12 @@
         snip {
             bindings = <&kp LG(LS(S))>;
             key-positions = <24 25 26>;
+        };
+
+        comma {
+            bindings = <&kp KP_COMMA>;
+            key-positions = <37 38>;
+            layers = <1>;
         };
     };
 
