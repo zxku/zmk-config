@@ -442,10 +442,9 @@
             key-positions = <24 25 26>;
         };
 
-        comma {
+        kp_comma {
             bindings = <&kp KP_COMMA>;
-            key-positions = <37 38>;
-            layers = <1>;
+            key-positions = <37 39 38>;
         };
     };
 
