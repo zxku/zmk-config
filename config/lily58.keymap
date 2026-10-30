@@ -327,15 +327,6 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        ClrBTProf: ClrBTProf {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CLRBTPROF";
-            bindings = <&none>, <&bt BT_CLR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
         UtilEnt: UtilEnt {
             compatible = "zmk,behavior-hold-tap";
             label = "UTILENT";
@@ -343,6 +334,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        BT_Erase: BT_Erase {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_ERASE";
+            bindings = <&none>, <&bt BT_CLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -485,11 +485,11 @@
         Utility {
             display-name = "Utility";
             bindings = <
-&trans  &none  &tog 6  &ext_power EP_TOG  &out OUT_TOG  &ClrBTProf                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_TOG
-&none   &none  &none   &none              &none         &none                       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &ext_power EP_TOG
-&none   &none  &none   &none              &none         &none                       &none          &none          &none          &none          &none          &none
-&tog 2  &none  &none   &none              &none         &none       &none    &none  &none          &none          &none          &none          &none          &none
-                       &none              &none         &none       &none    &none  &none          &none          &none
+&trans  &none  &tog 6  &ext_power EP_TOG  &out OUT_TOG  &BT_Erase                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_TOG
+&none   &none  &none   &none              &none         &none                      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &ext_power EP_TOG
+&none   &none  &none   &none              &none         &none                      &none          &none          &none          &none          &none          &none
+&tog 2  &none  &none   &none              &none         &none      &none    &none  &none          &none          &none          &none          &none          &none
+                       &none              &none         &none      &none    &none  &none          &none          &none
             >;
         };
 
