@@ -486,7 +486,7 @@
         Utility {
             display-name = "Utility";
             bindings = <
-&trans  &none  &tog 6  &ext_power EP_TOG  &out OUT_TOG  &BT_Erase BT_CLR 0                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_TOG
+&trans  &none  &tog 6  &ext_power EP_TOG  &out OUT_TOG  &BT_Erase BT_CLR_CMD 0                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_TOG
 &none   &none  &none   &none              &none         &none                               &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &ext_power EP_TOG
 &none   &none  &none   &none              &none         &none                               &none          &none          &none          &none          &none          &none
 &tog 2  &none  &none   &none              &none         &none               &none    &none  &none          &none          &none          &none          &none          &none
