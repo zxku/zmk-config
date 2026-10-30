@@ -235,14 +235,6 @@
             tap-ms = <30>;
         };
 
-        ClrBT: ClrBT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&bt BT_CLR>;
-
-            label = "CLRBT";
-        };
-
         milli: milli {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -294,16 +286,6 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        BtClr: BtClr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BTCLR";
-            bindings = <&ClrBT>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <5000>;
-            require-prior-idle-ms = <200>;
-        };
-
         RMod: RMod {
             compatible = "zmk,behavior-hold-tap";
             label = "RMOD";
@@ -342,6 +324,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
+        };
+
+        ClrBTProf: ClrBTProf {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CLRBTPROF";
+            bindings = <&none>, <&bt BT_CLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -484,8 +475,8 @@
         Utility {
             display-name = "Utility";
             bindings = <
-&trans  &none  &tog 6  &ext_power EP_TOG  &none  &BtClr 0 0                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none   &none  &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&trans  &none  &tog 6  &ext_power EP_TOG  &none  &ClrBTProf                   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&none   &none  &none   &none              &none  &none                        &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &ext_power EP_TOG
 &none   &none  &none   &none              &none  &none                        &none          &none          &none          &none          &none          &none
 &tog 2  &none  &none   &none              &none  &none       &none    &trans  &none          &none          &none          &none          &none          &none
                        &none              &none  &none       &none    &none   &none          &none          &none
